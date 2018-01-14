@@ -62,14 +62,24 @@ def change(score):
     return render_template('change.html', marks=score)
 
 
-@app.route('/result/')
-def result():
-    d = {"phy": 50, "maths": 23, "chem": 17}
-    return render_template('result.html', result=d)
+# @app.route('/result/')
+# def result():
+#    d = {"phy": 50, "maths": 23, "chem": 17}
+#    return render_template('result.html', result=d)
 
 @app.route('/static/')
 def status():
     return render_template('static.html')
+
+@app.route('/student/')
+def student():
+    return render_template('student.html')
+
+@app.route('/result/', methods=['POST', 'GET'])
+def result():
+    if request.method == 'POST':
+        result = request.form
+        return render_template('result.html', result=result)
 
 
 if __name__ == '__main__':
