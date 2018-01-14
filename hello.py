@@ -1,6 +1,14 @@
 from flask import Flask
 app = Flask(__name__)
 
+
+@app.route('/hello/')
+def hell():
+    return "check"
+
+# another way to add urls is to write 
+# app.add_url_rule('hello', hell)
+
 @app.route('/')
 def hello_world():
     # return "Hello World"
