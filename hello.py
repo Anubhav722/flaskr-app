@@ -1,4 +1,4 @@
-from flask import Flask, url_for, redirect, request
+from flask import Flask, url_for, redirect, request, render_template
 app = Flask(__name__)
 
 
@@ -50,6 +50,22 @@ def login():
       user = request.args.get('nm')
       return redirect(url_for('success',name = user))
 
+
+# ADDING AND RENDERING TEMPLATES
+@app.route('/check/<user>')
+def index(user):
+    return render_template('hello.html', name=user)
+
+
+@app.route('/change/<int:score>')
+def change(score):
+    return render_template('change.html', marks=score)
+
+
+@app.route('/result/')
+def result():
+    d = {"phy": 50, "maths": 23, "chem": 17}
+    return render_template('result.html', result=d)
 
 if __name__ == '__main__':
     app.debug = True
