@@ -51,3 +51,16 @@ The server will then reload itself if the code changes. It will also provide a u
   app.run()			   |
   app.run(debug = True)|
 +----------------------+
+
+### VARIABLE RULES
+
+In addition to the default string variable part, rules can be constructed using the following converters −
+
+int
+accepts integer
+
+float
+For floating point value
+
+path
+accepts slashes used as directory separator character
