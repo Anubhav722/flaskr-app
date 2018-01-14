@@ -1,4 +1,4 @@
-from flask import Flask, url_for, redirect, request, render_template
+from flask import Flask, url_for, redirect, request, render_template, make_response
 app = Flask(__name__)
 
 
@@ -80,6 +80,22 @@ def result():
     if request.method == 'POST':
         result = request.form
         return render_template('result.html', result=result)
+
+
+# INTRODUCING COOKIES OVER HERE.
+
+@app.route('/input/')
+def input():
+    return render_template('input.html')
+
+@app.route('/setcookie/', methods=['GET', 'POST'])
+def setcookie():
+    if request.method == 'POST':
+        user = request.form['nm']
+        resp = make_response(render_template('readcookie.html'))
+
+        return resp
+
 
 
 if __name__ == '__main__':
