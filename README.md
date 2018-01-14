@@ -64,3 +64,10 @@ For floating point value
 
 path
 accepts slashes used as directory separator character
+
+### FLASK URL BUILDING
+
+
+The url_for() function is very useful for dynamically building a URL for a specific function. The function accepts the name of a function as first argument, and one or more keyword arguments, each corresponding to the variable part of URL.
+
+url_for() is used for namespacing functions in django, can also pass in the arguments.

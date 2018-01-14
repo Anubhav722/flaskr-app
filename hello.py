@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, url_for, redirect
 app = Flask(__name__)
 
 
@@ -26,6 +26,14 @@ def show_blog(postID):
 def hello_world():
     # return "Hello World"
     return "<h1>HELLO WORLD</h1>"
+
+@app.route('/user/<name>')
+def hello_user(name):
+   if name =='admin':
+      return redirect(url_for('hello_world'))
+   else:
+      return redirect(url_for('hello_name', name = name))
+
 
 if __name__ == '__main__':
     app.debug = True
