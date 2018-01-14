@@ -71,3 +71,22 @@ accepts slashes used as directory separator character
 The url_for() function is very useful for dynamically building a URL for a specific function. The function accepts the name of a function as first argument, and one or more keyword arguments, each corresponding to the variable part of URL.
 
 url_for() is used for namespacing functions in django, can also pass in the arguments.
+
+### HTTP METHODS
+
+GET
+Sends data in unencrypted form to the server. Most common method.
+
+HEAD
+Same as GET, but without response body
+
+POST
+Used to send HTML form data to server. Data received by POST method is not cached by server.
+
+PUT
+Replaces all current representations of the target resource with the uploaded content.
+
+	
+DELETE
+Removes all current representations of the target resource given by a URL
+
