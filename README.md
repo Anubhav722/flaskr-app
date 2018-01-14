@@ -39,3 +39,15 @@ options										   |
 											   |
 To be forwarded to underlying Werkzeug server. |
 +----------------------------------------------+
+
+
+### DEBUG MODE
+The server will then reload itself if the code changes. It will also provide a useful debugger to track the errors if any, in the application.
+
++----------------------+
+  DEBUG MODE 		   |
+					   |
+  app.debug = True 	   |
+  app.run()			   |
+  app.run(debug = True)|
++----------------------+
