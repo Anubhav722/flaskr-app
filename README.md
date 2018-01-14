@@ -90,3 +90,19 @@ Replaces all current representations of the target resource with the uploaded co
 DELETE
 Removes all current representations of the target resource given by a URL
 
+
+### TEMPLATES
+
+FLASK will search for a folder named templates.
+Flask is based on Jinga2 templating system. (same like django)
+
+
+The Jinga2 template engine uses the following delimiters for escaping from HTML.
+
+{% ... %} for Statements
+{{ ... }} for Expressions to print to the template output
+{# ... #} for Comments not included in the template output
+# ... ## for Line Statements
+
+function used to render templates is `render_template`
+
