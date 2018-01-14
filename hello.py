@@ -67,6 +67,11 @@ def result():
     d = {"phy": 50, "maths": 23, "chem": 17}
     return render_template('result.html', result=d)
 
+@app.route('/static/')
+def status():
+    return render_template('static.html')
+
+
 if __name__ == '__main__':
     app.debug = True
     app.run()

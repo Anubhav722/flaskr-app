@@ -1,0 +1,4 @@
+
+sayHello() {
+   alert("Hello World")
+}
